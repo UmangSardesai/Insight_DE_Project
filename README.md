@@ -1,34 +1,27 @@
 # Insight Data Engineering Project - 18B
 
 ## Summary
-Mining comment made by users on Reddit
+Low Latency search of high velocity incoming data
 
 ## Purpose
-Can compute 500 GB of data smoothly without any hiccups. Elastic Search has a lot of a features. Try to show them using this data.  
+Search engine is based on indexing. Search results are dependent of two things. 
 
-## Use cases
-1) Get all the comments made by one user over the years: 
-a) Understand user behavior.
-b) Does he/she swear a lot.
+a) How fast is the indexing 
+b) How efficient is the indexing.
 
-2) Fetch the most discussed topic (number of times a word as appeared) on a day/week/month.
+Streaming data - Data changes continuously. That means index changes continuously., which makes it very difficult to search.
 
-3) Performance testing: Compare time taken to process 100 GB of data on:
+Elastic Search provides Percolators which is specifically used for stream data. 
+However can it scale?
 
-a) Elastic Search running on a Spark Cluster.
+### Basic Goal:
+Implement Low Latency search (as real time as possible) of high velocity incoming data using Percolators
 
-b) Elastic Search running separately with Spark doing preproceessing.
+### Good to have:
+Tune parameters and do significant modifications to improve the response time for search. 
 
-c) Mutli Node Elastic Search with Mutil Node Spark.
+### Cherry on the cake: 
+Implement a simple inverted index search on multi node Spark and check if can out perform percolators. 
 
-## Technologies used:
-a) Reddit data is on S3
-
-b) Spark for Preprocessing and Filtering
-
-c) Elastic Search for Search 
-
-d) Web UI: Using Flask and Bootstrap
-
-## Architechture
-![Arch](https://github.com/UmangSardesai/Insight_DE_Project/blob/master/arch.png)
+## Use case:
+Amazon Customer support.    
