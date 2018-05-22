@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="../static/style.css">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<br>
+<title>Amazon Customer Service Portal</title>
+<body style="background-color: #EEf5DB">
+
+<h1 style="font-family: Lobster, Monospace; text-align: center">Amazon Customer Service Portal</h1>
+
+<br>
+<br>
+
+<form method="post" action="/">
+  <div class="form-group" style="margin: auto; width: 60%">
+    <input type="text" name="numberOfProducers" class="form-control" id="numberOfProducers" placeholder="Enter the number of customers calling every second">
+    <br>
+    <div style="text-align: center">
+      <button id="StartIngestion" name="StartIngestion" class="btn btn-outline-success" type="submit">Start Ingestion</button>
+      <button id="StopIngestion" name="StopIngestion" class="btn btn-outline-danger" type="submit">Stop Ingestion</button>
+    </div> 
+  </div>
+</form>
+<br>
+
+<h2 style="font-family: Lobster, Monospace; text-align: center">View Buckets</h2>
+<div class="list-container" style="margin: auto; width: 60%">
+  <div class="list-group" style="font-family: Tahoma, Monospace; text-align: center; font-size: 18px">
+    <a href="/refund" class="list-group-item">Refunds Bucket</a>
+    <a href="/order" class="list-group-item">Orders Bucket</a>
+    <a href="/deals" class="list-group-item">Deals Bucket</a>
+    <a href="/payment" class="list-group-item">Payments Bucket</a>
+    <a href="/gift_card" class="list-group-item">Gift Card Bucket</a>    
+  </div>
+</div>
+   
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap-theme.min.css"> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+ -->
+</body>
+</html>

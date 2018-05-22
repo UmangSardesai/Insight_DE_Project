@@ -1,0 +1,198 @@
+svg {
+font: 10px sans-serif;
+align: center;
+}
+.caption {
+font-weight: bold;
+}
+.key path {
+display: none;
+}
+.key line {
+stroke: #000;
+shape-rendering: crispEdges;
+}
+
+div.tooltip {   
+position: absolute;
+text-align: center;
+padding: 2px;
+font: 12px sans-serif;
+background: white;
+border: 0px;
+border-radius: 8px;
+pointer-events: none;
+}    
+
+.list-group-mine .list-group-item {
+  background-color: #f1f9fb;
+}
+
+.list-container {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.PopButton,
+.LiteracyButton,
+.EmploymentButton,
+.CrimeButton
+{
+  color: white;
+  background-color: #333745;
+  border-color: #285e8e;
+  font-family: Lobster, Monospace;
+}
+
+.foot-links a, .foot-links p, .foot-links li, .col-sm-4, .row-1{
+  display: block;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  font-family: OpenSansRegular, Arial, sans-serif;
+  font-size: 10px;
+  color: rgb(241, 241, 241);
+  padding-bottom: 5px;
+  /*text-shadow: rgb(255, 255, 255) 1px 1px 0px;*/
+}
+
+.col-sm-4 h4, .row-1 h4{
+  font-family: Lobster, Monospace;
+}
+
+.seldist{
+  fill: none;
+  stroke: yellow;
+  stroke-width: 2;
+}
+
+a:link {
+  color: blue;
+}
+.foot-links img{
+  padding-top: 5px;
+}
+#footer{
+  background: #333745;
+  border-top: 1px solid rgb(222, 222, 222);
+  margin-top: -2px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-left: 25px;
+  position: fixed;
+  /*margin-left: 80px;*/
+  /*margin-right: 80px;*/
+  /*margin-bottom: 25px;*/
+}
+
+.foot-header{
+  font-family: Lobster, Monospace;
+  font-size: 18px;
+  color: rgb(241, 241, 241);
+  padding-bottom: 20px;
+  /*text-shadow: rgb(255, 255, 255) 1px 1px 0px;*/
+}
+
+#footer .container{
+
+  /*max-width: 1300px;*/
+
+  /*max-width: 1300px;*/
+
+
+   }
+
+#bottom-footer{
+  margin-bottom: 20px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+#bottom-footer a{
+  text-decoration: none;
+  color: rgb(241, 241, 241);
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  font-size: 12px;
+  padding: 0px 15px;
+  border-right: 1px solid #ccc;
+  font-family: 'OpenSansRegular', Arial, sans-serif;
+  color: rgb(241, 241, 241);
+  padding: 0 12px;
+  /*text-shadow: 1px 1px 0 rgba(255,255,255,1);*/
+}
+#bottom-footer .phone img{
+  margin-right: 7px;
+}
+#bottom-footer .phone .red{
+  font-size: 16px;
+  margin-top: -7px;
+  font-family: 'OpenSansRegular', Arial, sans-serif;
+  font-size: 18px!important;
+  color: #d10029!important;
+  position: relative;
+  top: -5px;
+  /*text-shadow: 1px 1px 0 rgba(255,255,255,1)!important;*/
+}
+#bottom-footer .phone .red small{
+  font-family: 'OpenSansRegular', Arial, sans-serif;
+  font-size: 12px!important;
+  display: block;
+  color: #626262!important;
+  /*text-shadow: 1px 1px 0 rgba(255,255,255,1)!important;*/
+  margin-top: -5px;
+}
+#final-footer{
+  font-size: 11px;
+  color: #666;
+}
+#final-footer i{
+  font-size: auto;
+}
+    
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000000;
+    shape-rendering: crispEdges;
+}
+
+.axis text{
+    fill: #000000;
+    font: Times;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tick line{ 
+  stroke: black
+}
+
+.row{
+  font-size: 12px;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}

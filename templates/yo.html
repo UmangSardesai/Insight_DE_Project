@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="../static/style.css">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<title>Welcome {{user.username}}</title>
+<body style="background-color: #EEf5DB">
+
+<h1 style="font-family: Lobster, Monospace; text-align: center">Welcome {{user.username}}</h1>
+<br>
+<br>
+<br>
+<div id="message_list" style="font-family: Tahoma, Monospace; text-align: center; font-size: 20px">
+        {% for post in posts %}
+        <p><b>New message: </b>{{post.message}}</p>
+        {% endfor %}
+</div>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>   
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+<script src="https://cdn.socket.io/socket.io-1.3.7.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.8.1/axios.min.js"></script>
+<script>
+
+var message_list = document.getElementById('message_list');
+var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+socket.on('new_message', function(data) {
+  message_list.innerHTML = message_list.innerHTML + '<p><b>New message: </b>'+data.message+'</p>'
+});
+</script>
+
+
+</body>
+</html>

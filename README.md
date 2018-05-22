@@ -14,14 +14,7 @@ Streaming data - Data changes continuously. That means index changes continuousl
 Elastic Search provides Percolators which is specifically used for stream data. 
 However can it scale?
 
-### Basic Goal:
-Implement Low Latency search (as real time as possible) of high velocity incoming data using Percolators
-
-### Good to have:
-Tune parameters and do significant modifications to improve the response time for search. 
-
-### Cherry on the cake: 
-Implement a simple inverted index search on multi node Spark and check if can out perform percolators. 
-
 ## Use case:
-Amazon Customer support.    
+Amazon Customer support.
+
+More details to be added soon. In the meantime, please view the project slides [here](bit.ly/StreamSearchSlides).    

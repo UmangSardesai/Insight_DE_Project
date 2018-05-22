@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="../static/style.css">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<br>
+<title>Refund Bucket</title>
+<body style="background-color: #EEf5DB">
+
+<h1 style="font-family: Lobster, Monospace; text-align: center">Refund Bucket</h1>
+<br>
+<br>
+
+<div class="container" style="font-family: Lobster, Monospace; text-align: center">
+  <div class="row" style="font-size: 26px">
+    <div class="col-sm">
+      <p>Total messages processed</p> 
+      <p id="feed_count">{{stats[0]}}</p>
+    </div>
+    <div class="col-sm">
+      <p>Average search result time</p>
+      <p id="avg_srt" >{{stats[1]}} ms</p>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<h2 style="font-family: Lobster, Monospace; text-align: center", font color="red">Incoming message feed</h1>
+<div class="list-container" style="margin: auto; width: 60%">  
+  <div class="list-group" id="message_list" style="font-family: Tahoma, Monospace; text-align: center">
+          {% for post in posts %}
+          <li class="list-group-item"><b>Message: </b>{{post.message}}</li>
+          {% endfor %}
+  </div>
+</div>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+<script src="https://cdn.socket.io/socket.io-1.3.7.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.8.1/axios.min.js"></script>
+<script>
+
+var message_list = document.getElementById('message_list');
+var feed_count = document.getElementById('feed_count');
+var avg_srt = document.getElementById('avg_srt');
+
+var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+socket.on('new_message_refund', function(data) {
+  message_list.innerHTML = '<li class=\"list-group-item\"><b>Message: </b>'+data.message+'</li>' + message_list.innerHTML
+  feed_count.innerHTML = data.new_count
+  avg_srt.innerHTML = data.new_avg + " ms"
+});
+</script>
+
+
+</body>
+</html>
