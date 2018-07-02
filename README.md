@@ -28,4 +28,4 @@ a) Scaling the Kafka Consumer, as it does most of the processing in the applicat
 
 The project slides can be viewed [here](https://bit.ly/StreamSearchSlides).
 
-The demo can be viewed [here](https://drive.google.com/file/d/1_PsOfEKdRTfa3bQNxydXKhM_cgxcVlQJ/view).
+The demo can be viewed [here](https://bit.ly/StreamSearchDemo).
